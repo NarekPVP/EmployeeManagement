@@ -26,7 +26,7 @@ Overall, the Employee Management App is a powerful tool for any business looking
 ![main](readmeassets/main.png)
 
 ## Add new employee
-![new](readmeassets/add.png)
+![new](readmeassets/new.png)
 
 ## Update existing employee 
 ![edit](readmeassets/edit.png)

@@ -44,9 +44,9 @@
         Employee GetOne(string name, DateTime? CreatedAt = null);
         Employee GetOne(DateTime CreatedAt);
         List<Employee> FilterByRank(Rank rank);
-        public bool AddEmployee(Employee employee);
+        bool AddEmployee(Employee employee);
         bool UpdateEmployee(Employee employee);
-        public bool DeleteEmployee(Employee employee);
+        bool DeleteEmployee(Employee employee);
     }
 ```
 

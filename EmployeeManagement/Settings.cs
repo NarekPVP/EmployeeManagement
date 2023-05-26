@@ -9,6 +9,6 @@ namespace EmployeeManagement
     public static class Settings
     {
         public const string AllEmployeesText = "All employees";
-        public const string EmployeeFilePath = @"C:\Users\hnare\OneDrive\Рабочий стол\EmployeeManagement-master\EmployeeManagement\EmployeeDataCSV\employee.csv";
+        public const string EmployeeFilePath = @"C:\Users\hnare\OneDrive\Documents\Projects\EmployeeManagement\EmployeeManagement\EmployeeDataCSV\employee.csv";
     }
 }

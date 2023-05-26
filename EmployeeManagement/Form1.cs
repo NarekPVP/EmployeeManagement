@@ -1,12 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using EmployeeManagement.Enums;
 using EmployeeManagement.Models;
@@ -18,10 +13,13 @@ namespace EmployeeManagement
     public partial class Form1 : Form
     {
         private readonly IEmployeeService _employeeService;
+        private readonly IPrinterService _printerService;
+        
         public Form1()
         {
             InitializeComponent();
             _employeeService = new EmployeeService();
+            _printerService = new PrinterService(printDialog);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -124,6 +122,25 @@ namespace EmployeeManagement
                     File.Copy(Settings.EmployeeFilePath, selectedFilePath);
                     MessageBox.Show("File has been exported!");
                 }
+            }
+        }
+
+        private void printToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _printerService.InitializePrinter();
+        
+            try
+            {
+                bool printedSuccessfully = _printerService.PrintResult();
+
+                if (printedSuccessfully)
+                    MessageBox.Show("Printed");
+                else
+                    MessageBox.Show("Something went wrong!");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }

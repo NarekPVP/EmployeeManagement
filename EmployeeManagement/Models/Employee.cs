@@ -15,6 +15,5 @@ namespace EmployeeManagement.Models
         public DateTime CreatedAt { get; set; }
         public Rank Rank { get; set; }
         public string Languages { get; set; }
-
     }
 }

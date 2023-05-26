@@ -98,10 +98,5 @@ namespace EmployeeManagement.Parsers
                 Languages = GetAllLanguages(parts[3])
             };
         }
-
-        // public override string ToString()
-        // {
-            // return $"{Name} -> {Description} -> {TaskFinishedDateTime} -> {Rank}";
-        // }
     }
 }
